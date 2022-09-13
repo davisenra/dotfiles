@@ -34,7 +34,7 @@ window:
     x: 10
     y: 0
   dynamic_padding: true
-decorations: none
+  decorations: none
 font:
   normal:
     family: JetBrains Mono
@@ -42,3 +42,6 @@ font:
 theme: Yousai
 key_bindings:
   - { key: Return,   mods: Control|Shift, action: SpawnNewInstance }
+  - { key: V,        mods: Control|Shift, action: Paste            }
+  - { key: C,        mods: Control|Shift, action: Copy             }
+  - { key: Insert,   mods: Shift,         action: PasteSelection   }
