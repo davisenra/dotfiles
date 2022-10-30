@@ -15,10 +15,14 @@ alias ....='cd ../..'
 
 # DOCKER DEVELOPMENT
 alias dockerps="docker ps --format 'table {{.ID}}\t{{.Image}}\t{{.Names}}\t{{.Status}}'"
+alias startdb="cd ~/docker/postgresql && docker-compose up -d && cd ~"
 
 # PHP & LARAVEL
 alias sail='[ -f sail ] && bash sail || bash vendor/bin/sail'
-alias artisan="php artisan" 
+alias art="php artisan"
+
+# ALIASES & FUNCTIONS
+# ...
 
 # STARSHIP
 eval "$(starship init zsh)"
