@@ -38,6 +38,6 @@ enabled_layouts *
 
 
 # BEGIN_KITTY_THEME
-# GitHub Dark
+# GitHub Dark Dimmed
 include current-theme.conf
 # END_KITTY_THEME
