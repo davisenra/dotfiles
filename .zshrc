@@ -16,6 +16,7 @@ alias cleanup="find -depth -mindepth 1 -type d -empty -exec rmdir -v "{}" \;"
 # DOCKER DEVELOPMENT
 alias dockerps="docker ps --format 'table {{.ID}}\t{{.Image}}\t{{.Names}}\t{{.Status}}'"
 alias startdb="cd ~/docker/postgresql && docker-compose up -d && cd ~"
+alias lzd="lazydocker"
 
 # PHP & LARAVEL
 alias sail='[ -f sail ] && bash sail || bash vendor/bin/sail'
