@@ -21,6 +21,7 @@ alias lzd="lazydocker"
 # PHP & LARAVEL
 alias sail='[ -f sail ] && bash sail || bash vendor/bin/sail'
 alias art="php artisan"
+alias pint="./vendor/bin/pint"
 
 # ALIASES & FUNCTIONS
 function ydl () { youtube-dl $1 }
