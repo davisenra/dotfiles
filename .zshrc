@@ -12,6 +12,7 @@ alias c="clear"
 alias ..='cd ..'
 alias ....='cd ../..'
 alias cleanup="find -depth -mindepth 1 -type d -empty -exec rmdir -v "{}" \;"
+alias lvim="/home/davi/.local/bin/lvim"
 
 # DOCKER DEVELOPMENT
 alias dockerps="docker ps --format 'table {{.ID}}\t{{.Image}}\t{{.Names}}\t{{.Status}}'"
