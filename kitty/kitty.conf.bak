@@ -6,9 +6,12 @@ bold_italic_font auto
 font_size 10.0
 
 #Window
+initial_window_width  100c
+initial_window_height 30c
+background_opacity 0.95
 hide_window_decorations yes
 window_padding_width 8
-remember_window_size yes
+remember_window_size no
 enabled_layouts *
 # selection_foreground #000000
 # selection_background #ffffff
@@ -38,6 +41,6 @@ enabled_layouts *
 
 
 # BEGIN_KITTY_THEME
-# GitHub Dark Dimmed
+# GitHub Dark
 include current-theme.conf
 # END_KITTY_THEME
