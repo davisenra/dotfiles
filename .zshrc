@@ -1,11 +1,3 @@
-export ZSH="$HOME/.oh-my-zsh"
-
-plugins=(zsh-autosuggestions)
-
-source $ZSH/oh-my-zsh.sh
-
-DEFAULT_USER="davi"
-
 # MANJARO
 alias update="sudo pamac update"
 alias c="clear"
@@ -28,5 +20,4 @@ alias pint="./vendor/bin/pint"
 function ydl () { youtube-dl $1 }
 function video2zap () { ffmpeg -i $1 -vcodec libx264 -crf $2 video2zap.mp4 }
 
-# STARSHIP
-eval "$(starship init zsh)"
+eval "$(oh-my-posh init zsh --config ~/.poshthemes/amro.omp.json)"
