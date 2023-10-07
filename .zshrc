@@ -1,23 +1,23 @@
-# GENERAL
-alias update="yay -Syu"
-alias c="clear"
-alias ..='cd ..'
-alias ....='cd ../..'
-alias ~="cd ~"
-alias cleanup="find -depth -mindepth 1 -type d -empty -exec rmdir -v "{}" \;"
-alias lvim="/home/davi/.local/bin/lvim"
+export ZSH="$HOME/.oh-my-zsh"
+export TERM=xterm-256color
 
-function gte () { nohup gnome-text-editor $1 & }
-function ydl () { youtube-dl $1 }
-function run () { gcc $1.c -o $1 -lm && ./$1 }
+ZSH_THEME="half-life"
 
-# DOCKER DEVELOPMENT
-alias dockerps="docker ps --format 'table {{.ID}}\t{{.Image}}\t{{.Names}}\t{{.Status}}'"
-alias lzd="lazydocker"
+plugins=(
+	git
+	zsh-syntax-highlighting
+	zsh-autosuggestions
+)
 
-# PHP & LARAVEL
-alias sail='[ -f sail ] && bash sail || bash vendor/bin/sail'
+source $ZSH/oh-my-zsh.sh
+
 alias art="php artisan"
-alias pint="./vendor/bin/pint"
+alias dc="docker compose"
 
-eval "$(oh-my-posh init zsh --config ~/.poshthemes/nu4a.omp.json)"
+# bun completions
+[ -s "/home/davi/.bun/_bun" ] && source "/home/davi/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+export PATH="/home/davi/.config/composer/vendor/bin:$PATH"
