@@ -16,6 +16,6 @@ enabled_layouts *
 
 
 # BEGIN_KITTY_THEME
-# Vibrant Ink
+# Wez
 include current-theme.conf
 # END_KITTY_THEME
