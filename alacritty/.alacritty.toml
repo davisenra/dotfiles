@@ -2,7 +2,7 @@
 size = 11.0
 
 [font.normal]
-family = "JetBrainsMono Nerd Font"
+family = "JetBrains Mono"
 
 [window]
 decorations = "None"
