@@ -1,17 +1,3 @@
-# Source: https://github.com/dreamsofautonomy/zensh
-
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
-if [[ -f "/opt/homebrew/bin/brew" ]] then
-  # If you're using macOS, you'll want this enabled
-  eval "$(/opt/homebrew/bin/brew shellenv)"
-fi
-
 # Set the directory we want to store zinit and plugins
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 
@@ -24,35 +10,16 @@ fi
 # Source/Load zinit
 source "${ZINIT_HOME}/zinit.zsh"
 
-# Add in Powerlevel10k
-zinit ice depth=1; zinit light romkatv/powerlevel10k
-
 # Add in zsh plugins
 zinit light zsh-users/zsh-syntax-highlighting
 zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-autosuggestions
 zinit light Aloxaf/fzf-tab
 
-# Add in snippets
-zinit snippet OMZP::git
-zinit snippet OMZP::sudo
-zinit snippet OMZP::archlinux
-
 # Load completions
 autoload -Uz compinit && compinit
 
 zinit cdreplay -q
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-# Keybindings
-bindkey '^[[3~' delete-char
-bindkey '^?' backward-delete-char
-bindkey '^[[1;5D' backward-word
-bindkey '^[[1;5C' forward-word
-bindkey '^[[5D' backward-word
-bindkey '^[[5C' forward-word
 
 # History
 HISTSIZE=5000
@@ -74,17 +41,16 @@ zstyle ':completion:*' menu no
 
 # Aliases
 alias ls='ls --color'
-alias vim='nvim'
-alias c='clear'
 alias art='php artisan'
 alias com='composer'
 alias dc='docker compose'
-alias neofetch='fastfetch'
+alias ff='fastfetch'
 
+export PATH="$PATH:/Users/docker/.local/bin"
+export PATH="$HOME/.composer/vendor/bin/laravel:$PATH"
 export PATH="/home/$USER/.local/bin:$PATH"
-export PATH="/home/$USER/.config/composer/vendor/bin:$PATH"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 
-eval "$(fzf --zsh)"
+eval "$(starship init zsh)"
