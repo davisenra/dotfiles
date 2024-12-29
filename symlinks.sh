@@ -3,20 +3,17 @@
 source_zshrc=~/dotfiles/.zshrc
 target_zshrc=~/.zshrc
 
-# source_kitty_conf=~/dotfiles/kitty/kitty.conf
-# target_kitty_conf=~/.config/kitty/kitty.conf
-
 source_fastfetch_conf=~/dotfiles/fastfetch/config.jsonc
 target_fastfetch_conf=~/.config/fastfetch/config.jsonc
-
-source_alacritty_conf=~/dotfiles/alacritty/.alacritty.toml
-target_alacritty_conf=~/.alacritty.toml
 
 source_tmux_conf=~/dotfiles/tmux/.tmux.conf
 target_tmux_conf=~/.tmux.conf
 
 source_starship_conf=~/dotfiles/starship/starship.toml
 target_starship_conf=~/.config/starship.toml
+
+source_ghostty_conf=~/dotfiles/ghostty/config
+target_ghostty_conf=~/.config/ghostty/config
 
 create_link() {
     if [ -e "$2" ]; then
@@ -28,8 +25,7 @@ create_link() {
 }
 
 create_link "$source_zshrc" "$target_zshrc"
-# create_link "$source_kitty_conf" "$target_kitty_conf"
 create_link "$source_fastfetch_conf" "$target_fastfetch_conf"
-create_link "$source_alacritty_conf" "$target_alacritty_conf"
 create_link "$source_tmux_conf" "$target_tmux_conf"
 create_link "$source_starship_conf" "$target_starship_conf"
+create_link "$source_ghostty_conf" "$target_ghostty_conf"
