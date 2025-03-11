@@ -40,11 +40,19 @@ zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 zstyle ':completion:*' menu no
 
 # Aliases
-alias ls='ls --color'
-alias art='php artisan'
-alias com='composer'
-alias dc='docker compose'
-alias ff='fastfetch'
+alias ls="ls --color"
+alias art="php artisan"
+alias com="composer"
+alias dc="docker compose"
+alias gt="gamp-tools"
+alias gtr="gamp-tools deploy local resurrect"
+alias gtu="gamp-tools deploy local update"
+alias lg="lazygit"
+alias zed="zeditor"
+alias wip="git add . && git commit -m 'wip'"
+alias gsc="git switch main"
+alias gsd="git switch develop"
+alias gp="git pull"
 
 export PATH="$PATH:/Users/docker/.local/bin"
 export PATH="$HOME/.composer/vendor/bin/laravel:$PATH"
@@ -52,5 +60,11 @@ export PATH="/home/$USER/.local/bin:$PATH"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+
+export PNPM_HOME="/home/davi/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
 
 eval "$(starship init zsh)"
