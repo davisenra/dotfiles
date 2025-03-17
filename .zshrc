@@ -50,7 +50,7 @@ alias gtu="gamp-tools deploy local update"
 alias lg="lazygit"
 alias zed="zeditor"
 alias wip="git add . && git commit -m 'wip'"
-alias gsc="git switch main"
+alias gsm="git switch main"
 alias gsd="git switch develop"
 alias gp="git pull"
 
