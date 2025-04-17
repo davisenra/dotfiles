@@ -54,7 +54,6 @@ alias gsm="git switch main"
 alias gsd="git switch develop"
 alias gp="git pull"
 alias gf="git fetch"
-alias code="flatpak run com.visualstudio.code"
 
 export PATH="$PATH:/Users/docker/.local/bin"
 export PATH="$HOME/.composer/vendor/bin/laravel:$PATH"
