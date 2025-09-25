@@ -1,0 +1,68 @@
+{
+  "ui_font_size": 14,
+  "ui_font_family": "Adwaita Sans",
+  "ui_font_weight": null,
+  "project_panel": {
+    "auto_fold_dirs": false,
+    "dock": "left",
+    "default_width": 380
+  },
+  "buffer_font_size": 13,
+  "buffer_line_height": { "custom": 1.4 }, // standard is 1.3
+  "buffer_font_family": "JetBrains Mono",
+  "buffer_font_weight": null,
+  "git": {
+    "git_gutter": null,
+    "gutter_debounce": null,
+    "inline_blame": {
+      "show_commit_summary": true,
+      "min_column": 120
+    },
+    "hunk_style": null
+  },
+  "status_bar": {
+    "cursor_position_button": false,
+    "active_language_button": false
+  },
+  "debugger": {
+    "button": false
+  },
+  "notification_panel": {
+    "button": false
+  },
+  "collaboration_panel": {
+    "button": false
+  },
+  "scrollbar": {
+    "show": "auto",
+    "axes": {
+      "horizontal": false
+    }
+  },
+  "theme": {
+    "mode": "system",
+    "light": "One Light",
+    "dark": "JetBrains New Dark"
+  },
+  "languages": {
+    "TypeScript": {
+      "formatter": "language_server"
+    },
+    "Lua": {
+      "formatter": null,
+      "format_on_save": "off"
+    },
+    "Proto": {
+      "formatter": null,
+      "format_on_save": "off",
+      "ensure_final_newline_on_save": false,
+      "remove_trailing_whitespace_on_save": false
+    },
+    "PHP": {
+      "language_servers": ["phpactor", "intelephense"],
+      "formatter": null,
+      "format_on_save": "off"
+    }
+  },
+  "disable_ai": true
+}

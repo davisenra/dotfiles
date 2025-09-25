@@ -40,24 +40,32 @@ zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 zstyle ':completion:*' menu no
 
 # Aliases
-alias ls="ls --color"
-alias art="php artisan"
-alias com="composer"
+alias ls="exa -al --color=always --group-directories-first"
 alias dc="docker compose"
 alias gt="gamp-tools -e minikube"
 alias gtr="gamp-tools deploy local resurrect"
 alias gtu="gamp-tools deploy local update"
 alias lg="lazygit"
-alias zed="zeditor"
 alias wip="git add . && git commit -m 'wip'"
 alias gsm="git switch main"
 alias gsd="git switch develop"
 alias gp="git pull"
 alias gf="git fetch"
+alias gem="gemini"
+
+gti() {
+  if [[ "$#" -ne 2 ]]; then
+    echo "Usage: gti <policy_id> <json_path>" >&2
+    return 1
+  fi
+
+  gamp-tools -e minikube svc read-application "$1" | yq "$2"
+}
 
 export PATH="$PATH:/Users/docker/.local/bin"
 export PATH="$HOME/.composer/vendor/bin/laravel:$PATH"
 export PATH="/home/$USER/.local/bin:$PATH"
+export EDITOR="micro"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
