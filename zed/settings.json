@@ -46,11 +46,17 @@
   },
   "languages": {
     "TypeScript": {
-      "formatter": "language_server"
+      "formatter": {
+        "code_actions": {
+          "source.fixAll.eslint": true
+        }
+      }
     },
     "Lua": {
       "formatter": null,
-      "format_on_save": "off"
+      "format_on_save": "off",
+      "ensure_final_newline_on_save": false,
+      "remove_trailing_whitespace_on_save": false
     },
     "Proto": {
       "formatter": null,
@@ -62,6 +68,13 @@
       "language_servers": ["phpactor", "intelephense"],
       "formatter": null,
       "format_on_save": "off"
+    }
+  },
+  "experimental.theme_overrides": {
+    "syntax": {
+      "string": {
+        // "color": "#ffd866"
+      }
     }
   },
   "disable_ai": true
