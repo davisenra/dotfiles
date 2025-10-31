@@ -8,15 +8,14 @@
     "default_width": 380
   },
   "buffer_font_size": 13,
-  "buffer_line_height": { "custom": 1.4 }, // standard is 1.3
-  "buffer_font_family": "JetBrains Mono",
-  "buffer_font_weight": null,
+  "buffer_line_height": { "custom": 1.3 }, // standard is 1.3
+  "buffer_font_family": "JetBrains Mono NL",
   "git": {
     "git_gutter": null,
     "gutter_debounce": null,
     "inline_blame": {
       "show_commit_summary": true,
-      "min_column": 120
+      "min_column": 0
     },
     "hunk_style": null
   },
@@ -39,17 +38,24 @@
       "horizontal": false
     }
   },
-  "theme": {
-    "mode": "system",
-    "light": "One Light",
-    "dark": "JetBrains New Dark"
-  },
+  "theme": "One Light",
   "languages": {
     "TypeScript": {
       "formatter": {
-        "code_actions": {
-          "source.fixAll.eslint": true
+        "external": {
+          "command": "prettier",
+          "arguments": ["--stdin-filepath", "{buffer_path}"]
         }
+      },
+      "code_actions_on_format": {
+        "source.fixAll.eslint": true
+      }
+    },
+    "JavaScript": {
+      "formatter": "language_server",
+      "format_on_save": "on",
+      "code_actions_on_format": {
+        "source.fixAll.eslint": true
       }
     },
     "Lua": {
@@ -59,6 +65,12 @@
       "remove_trailing_whitespace_on_save": false
     },
     "Proto": {
+      "formatter": null,
+      "format_on_save": "off",
+      "ensure_final_newline_on_save": false,
+      "remove_trailing_whitespace_on_save": false
+    },
+    "YAML": {
       "formatter": null,
       "format_on_save": "off",
       "ensure_final_newline_on_save": false,
