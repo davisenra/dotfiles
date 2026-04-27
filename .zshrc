@@ -45,6 +45,8 @@ alias dc="docker compose"
 alias gt="gamp-tools -e minikube"
 alias gtr="gamp-tools deploy local resurrect"
 alias gtu="gamp-tools deploy local update"
+alias gtss="gamp-tools -e minikube sync shared"
+alias gtsp="gamp-tools -e minikube sync program"
 alias lg="lazygit"
 alias wip="git add . && git commit -m 'wip'"
 alias gsm="git switch main"
@@ -54,12 +56,12 @@ alias gf="git fetch"
 alias gem="gemini"
 
 gti() {
-  if [[ "$#" -ne 2 ]]; then
-    echo "Usage: gti <policy_id> <json_path>" >&2
-    return 1
-  fi
+    if [[ "$#" -ne 2 ]]; then
+        echo "Usage: gti <policy_id> <json_path>" >&2
+        return 1
+    fi
 
-  gamp-tools -e minikube svc read-application "$1" | yq "$2"
+    gamp-tools -e minikube svc read-application "$1" | yq "$2"
 }
 
 export PATH="$PATH:/Users/docker/.local/bin"
@@ -77,3 +79,6 @@ case ":$PATH:" in
 esac
 
 eval "$(starship init zsh)"
+
+# opencode
+export PATH=/home/davi/.opencode/bin:$PATH

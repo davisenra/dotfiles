@@ -10,13 +10,17 @@
     "context": "Workspace",
     "bindings": {
       "shift shift": "file_finder::Toggle",
-      "ctrl ctrl": "workspace::ToggleLeftDock"
-    }
+      "ctrl ctrl": "workspace::ToggleLeftDock",
+    },
   },
   {
     "context": "Editor",
     "bindings": {
-      "ctrl-d": "editor::DuplicateLineDown"
-    }
-  }
+      "ctrl-d": "editor::DuplicateLineDown",
+      "ctrl-alt-f": [
+        "task::Spawn",
+        { "task_name": "Run StyLua on Current File" },
+      ],
+    },
+  },
 ]

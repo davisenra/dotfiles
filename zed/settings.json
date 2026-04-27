@@ -1,11 +1,27 @@
 {
+  "cli_default_open_behavior": "existing_window",
+  "outline_panel": {
+    "dock": "left"
+  },
+  "agent": {
+    "dock": "right",
+    "favorite_models": [],
+    "model_parameters": []
+  },
+  "git_panel": {
+    "dock": "left"
+  },
+  "terminal": {
+    "dock": "right",
+  },
+  "icon_theme": "Zed (Default)",
   "ui_font_size": 14,
   "ui_font_family": "Adwaita Sans",
   "ui_font_weight": null,
   "project_panel": {
     "auto_fold_dirs": false,
     "dock": "left",
-    "default_width": 380
+    "default_width": 380,
   },
   "buffer_font_size": 13,
   "buffer_line_height": { "custom": 1.3 }, // standard is 1.3
@@ -15,28 +31,29 @@
     "gutter_debounce": null,
     "inline_blame": {
       "show_commit_summary": true,
-      "min_column": 0
+      "min_column": 0,
     },
-    "hunk_style": null
+    "hunk_style": null,
   },
   "status_bar": {
     "cursor_position_button": false,
-    "active_language_button": false
+    "active_language_button": false,
   },
   "debugger": {
-    "button": false
+    "button": false,
   },
   "notification_panel": {
-    "button": false
+    "button": false,
   },
   "collaboration_panel": {
-    "button": false
+    "dock": "left",
+    "button": false,
   },
   "scrollbar": {
     "show": "auto",
     "axes": {
-      "horizontal": false
-    }
+      "horizontal": false,
+    },
   },
   "theme": "One Light",
   "languages": {
@@ -44,50 +61,68 @@
       "formatter": {
         "external": {
           "command": "prettier",
-          "arguments": ["--stdin-filepath", "{buffer_path}"]
-        }
+          "arguments": ["--stdin-filepath", "{buffer_path}"],
+        },
       },
+      "format_on_save": "off",
       "code_actions_on_format": {
-        "source.fixAll.eslint": true
-      }
+        "source.fixAll.eslint": true,
+      },
     },
     "JavaScript": {
-      "formatter": "language_server",
-      "format_on_save": "on",
+      "formatter": {
+        "external": {
+          "command": "prettier",
+          "arguments": ["--stdin-filepath", "{buffer_path}"],
+        },
+      },
+      "format_on_save": "off",
       "code_actions_on_format": {
-        "source.fixAll.eslint": true
-      }
+        "source.fixAll.eslint": true,
+      },
+    },
+    "Vue.js": {
+      "formatter": {
+        "external": {
+          "command": "prettier",
+          "arguments": ["--stdin-filepath", "{buffer_path}"],
+        },
+      },
+      "format_on_save": "off",
+      "code_actions_on_format": {
+        "source.fixAll.eslint": true,
+      },
     },
     "Lua": {
-      "formatter": null,
+      "formatter": "language_server",
       "format_on_save": "off",
       "ensure_final_newline_on_save": false,
-      "remove_trailing_whitespace_on_save": false
+      "remove_trailing_whitespace_on_save": false,
+      "wrap_guides": [],
     },
     "Proto": {
       "formatter": null,
       "format_on_save": "off",
       "ensure_final_newline_on_save": false,
-      "remove_trailing_whitespace_on_save": false
+      "remove_trailing_whitespace_on_save": false,
     },
     "YAML": {
       "formatter": null,
       "format_on_save": "off",
       "ensure_final_newline_on_save": false,
-      "remove_trailing_whitespace_on_save": false
+      "remove_trailing_whitespace_on_save": false,
+    },
+    "XML": {
+      "formatter": null,
+      "format_on_save": "off",
+      "ensure_final_newline_on_save": false,
+      "remove_trailing_whitespace_on_save": false,
     },
     "PHP": {
-      "language_servers": ["phpactor", "intelephense"],
+      "language_servers": ["phpactor"],
       "formatter": null,
-      "format_on_save": "off"
-    }
+      "format_on_save": "off",
+    },
   },
-  "experimental.theme_overrides": {
-    "syntax": {
-      "string": {
-        // "color": "#ffd866"
-      }
-    }
-  },
-  "disable_ai": true
+  "disable_ai": true,
 }
