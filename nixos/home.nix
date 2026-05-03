@@ -57,7 +57,7 @@
         gsd = "git switch develop";
         gp = "git pull";
         gf = "git fetch";
-        rbs = "sudo nixos-rebuild switch";
+        rbs = "sudo nixos-rebuild switch --flake /home/davi/dotfiles/nixos";
       };
 
       history = {
