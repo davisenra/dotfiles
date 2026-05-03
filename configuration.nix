@@ -13,6 +13,12 @@
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
+  nix.gc = {
+    automatic = true;
+    dates = "weekly";
+    options = "--delete-older-than 7d";
+  };
+
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
@@ -49,6 +55,7 @@
 
   environment.systemPackages = with pkgs; [
     vim
+    nil
     tree
     wget
     micro
