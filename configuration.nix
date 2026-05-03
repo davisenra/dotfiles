@@ -11,7 +11,10 @@
 
   nixpkgs.config.allowUnfree = true;
 
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
 
   nix.gc = {
     automatic = true;
@@ -49,7 +52,11 @@
 
   users.users.davi = {
     isNormalUser = true;
-    extraGroups = [ "networkmanager"  "wheel" "docker" ];
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+      "docker"
+    ];
     shell = pkgs.zsh;
   };
 
@@ -65,6 +72,11 @@
     btop
     tmux
     fastfetch
+    nodejs_25
+    pnpm
+    go
+    php85
+    wrangler
     github-cli
   ];
 

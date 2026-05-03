@@ -19,6 +19,7 @@
     qbittorrent
     vlc
     zed-editor
+    vscode
 
     # Gnome Extensions
     gnomeExtensions.dash-to-dock
