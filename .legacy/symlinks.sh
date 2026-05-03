@@ -9,7 +9,7 @@ create_link_sudo() {
     echo "Created symlink: $2 -> $1"
 }
 
-source_nixos_hardware=~/dotfiles/nixos/hardware-configuration.nix
+source_nixos_hardware=~/dotfiles/hardware-configuration.nix
 target_nixos_hardware=/etc/nixos/hardware-configuration.nix
 
 if [ -e /etc/nixos/configuration.nix ]; then
