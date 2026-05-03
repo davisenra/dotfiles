@@ -23,5 +23,8 @@
 
     # Gnome Extensions
     gnomeExtensions.dash-to-dock
+
+    # Gnome Themes/Icons
+    papirus-icon-theme
   ];
 }

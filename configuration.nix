@@ -3,14 +3,7 @@
 {
   imports = [
     ./hardware-configuration.nix
-    ./modules/audio.nix
-    ./modules/boot.nix
-    ./modules/desktop.nix
-    ./modules/fonts.nix
-    ./modules/networking.nix
-    ./modules/packages.nix
-    ./modules/users.nix
-    ./modules/virtualization.nix
+    ./modules
     ./home
   ];
 
