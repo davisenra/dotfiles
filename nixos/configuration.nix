@@ -1,17 +1,35 @@
-{ config, lib, pkgs, ... }:
+{ pkgs, ... }:
 
 {
-  imports =
-    [
-      ./hardware-configuration.nix
-    ];
+  imports = [
+    ./hardware-configuration.nix
+    ./home.nix
+    <home-manager/nixos>
+  ];
+
+  home-manager.useGlobalPkgs = true;
+  home-manager.useUserPackages = true;
+
+  nixpkgs.config = {
+    allowUnfree = true;
+
+    firefox = {
+      enableGoogleTalkPlugin = true;
+      enableAdobeFlash = true;
+      enableGnomeExtensions = true;
+    };
+  };
 
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
-  networking.hostName = "nixos";
+  system.copySystemConfiguration = true;
+
+  system.stateVersion = "25.11";
+
+  networking.hostName = "yoga";
 
   networking.networkmanager.enable = true;
 
@@ -30,27 +48,26 @@
 
   services.libinput.enable = true;
 
+  programs.zsh.enable = true;
+
   users.users.davi = {
     isNormalUser = true;
     extraGroups = [ "networkmanager"  "wheel" "docker" ];
-    packages = with pkgs; [
-      tree
-    ];
+    shell = pkgs.zsh;
   };
 
   environment.systemPackages = with pkgs; [
     vim
-    firefox
+    tree
     wget
-    curl
-    git
     micro
+    curl
+    nixd
+    git
     btop
-    qbittorrent
-    ghostty
-    lazygit
+    tmux
     fastfetch
-    zed-editor
+    github-cli
   ];
 
   fonts.packages = with pkgs; [
@@ -65,9 +82,4 @@
   };
 
   services.openssh.enable = true;
-
-  system.copySystemConfiguration = true;
-
-  system.stateVersion = "25.11";
-
 }
