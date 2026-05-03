@@ -4,6 +4,8 @@
   home-manager.users.davi = {
     imports = [
       ./dconf.nix
+      ./fastfetch.nix
+      ./git.nix
       ./zsh.nix
       ./starship.nix
       ./ghostty.nix
@@ -11,7 +13,18 @@
       ./packages.nix
     ];
 
-    home.stateVersion = "24.11";
+    programs.eza = {
+      enable = true;
+      enableZshIntegration = true;
+      icons = "auto";
+    };
+
+    programs.zoxide = {
+      enable = true;
+      enableZshIntegration = true;
+    };
+
+    home.stateVersion = "25.11";
 
     home.sessionVariables = {
       EDITOR = "micro";

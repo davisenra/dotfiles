@@ -7,7 +7,6 @@
     lazydocker
     k9s
     opencode
-    eza
     starship
     zsh-fzf-tab
     fzf

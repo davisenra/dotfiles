@@ -13,6 +13,13 @@
     btop
     tmux
     fastfetch
+    ripgrep
+    fd
+    tokei
+    yq
+    sqlite
+    kubectl
+    helm
     uv
     nodejs_25
     pnpm

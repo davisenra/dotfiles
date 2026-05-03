@@ -23,6 +23,19 @@
     options = "--delete-older-than 7d";
   };
 
+  nix.optimise.automatic = true;
+
+  system.autoUpgrade = {
+    enable = true;
+    flake = "/home/davi/dotfiles";
+    flags = [ "--update-input" "nixpkgs" ];
+    dates = "04:00";
+  };
+
+  networking.firewall.enable = true;
+
+  services.gnome.gnome-keyring.enable = true;
+
   time.timeZone = "America/Sao_Paulo";
 
   i18n.defaultLocale = "en_US.UTF-8";

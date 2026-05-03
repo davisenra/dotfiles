@@ -8,6 +8,7 @@
     ./fonts.nix
     ./networking.nix
     ./packages.nix
+    ./power.nix
     ./users.nix
     ./virtualization.nix
   ];

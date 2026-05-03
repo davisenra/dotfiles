@@ -9,7 +9,6 @@
     syntaxHighlighting.enable = true;
 
     shellAliases = {
-      ls = "eza -al --color=always --group-directories-first";
       dc = "docker compose";
       lg = "lazygit";
       wip = "git add . && git commit -m 'wip'";
