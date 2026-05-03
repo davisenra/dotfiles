@@ -25,5 +25,8 @@
 
     # Gnome Themes/Icons
     papirus-icon-theme
+
+    # Compatibility
+    steam-run
   ];
 }
