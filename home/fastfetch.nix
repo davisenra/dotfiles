@@ -5,23 +5,22 @@
     "$schema" = "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json";
     logo = "nixos_small";
     display = {
-      separator = "  → ";
+      separator = ": ";
       color.keys = "blue";
+      color.separator = "blue";
     };
     modules = [
-      "title"
-      "separator"
+      "hostname"
       "os"
       "kernel"
       "shell"
       "terminal"
+      "de"
       "wm"
       "cpu"
       "gpu"
       "memory"
       "disk"
-      "break"
-      "colors"
     ];
   };
 }

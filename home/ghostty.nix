@@ -12,7 +12,7 @@
       window-height = 35;
       font-family = "JetBrainsMono Nerd Font";
       font-size = 10;
-      theme = "Ultra Dark";
+      theme = "GitHub Dark Default";
       mouse-scroll-multiplier = 0.5;
       background-opacity = 0.9;
     };

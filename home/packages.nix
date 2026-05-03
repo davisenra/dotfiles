@@ -14,7 +14,6 @@
     # GUI
     firefox
     google-chrome
-    spotify
     qbittorrent
     vlc
     zed-editor
