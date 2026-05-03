@@ -9,6 +9,9 @@
     syntaxHighlighting.enable = true;
 
     shellAliases = {
+      cat = "bat";
+      ls = "eza";
+      find = "fd";
       dc = "docker compose";
       lg = "lazygit";
       wip = "git add . && git commit -m 'wip'";
@@ -16,7 +19,7 @@
       gsd = "git switch develop";
       gp = "git pull";
       gf = "git fetch";
-      rbs = "sudo nixos-rebuild switch --flake /home/davi/dotfiles";
+      nrs = "sudo nixos-rebuild switch --flake /home/davi/dotfiles";
     };
 
     history = {

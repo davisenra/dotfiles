@@ -28,19 +28,24 @@
   system.autoUpgrade = {
     enable = true;
     flake = "/home/davi/dotfiles";
-    flags = [ "--update-input" "nixpkgs" ];
+    flags = [
+      "--update-input"
+      "nixpkgs"
+    ];
     dates = "04:00";
   };
 
   networking.firewall.enable = true;
 
   services.gnome.gnome-keyring.enable = true;
+  services.openssh.enable = true;
+  services.fwupd.enable = true;
+
+  security.pam.services.login.enableGnomeKeyring = true;
 
   time.timeZone = "America/Sao_Paulo";
 
   i18n.defaultLocale = "en_US.UTF-8";
-
-  services.openssh.enable = true;
 
   system.stateVersion = "25.11";
 }

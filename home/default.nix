@@ -24,6 +24,11 @@
       enableZshIntegration = true;
     };
 
+    programs.bat = {
+      enable = true;
+      config.theme = "GitHub";
+    };
+
     home.stateVersion = "25.11";
 
     home.sessionVariables = {
