@@ -30,6 +30,10 @@
         show-trash = false;
         transparency-mode = "FIXED";
       };
+      "org/gnome/shell/extensions/alphabetical-app-grid" = {
+        sort-order = "alphabetical";
+        folder-order = "alphabetical";
+      };
     };
   };
 }

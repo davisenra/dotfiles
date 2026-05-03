@@ -21,6 +21,7 @@
 
     # Gnome Extensions
     gnomeExtensions.dash-to-dock
+    gnomeExtensions.alphabetical-app-grid
 
     # Gnome Themes/Icons
     papirus-icon-theme
