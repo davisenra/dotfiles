@@ -1,9 +1,18 @@
-{ ... }:
+{ lib, ... }:
 
+let
+  mkTuple = lib.gvariant.mkTuple;
+in
 {
   dconf = {
     enable = true;
     settings = {
+      "org/gnome/desktop/input-sources" = {
+        sources = [
+          (mkTuple [ "xkb" "us" ])
+          (mkTuple [ "xkb" "br+abnt2" ])
+        ];
+      };
       "org/gnome/desktop/interface" = {
         color-scheme = "prefer-dark";
         icon-theme = "Papirus";

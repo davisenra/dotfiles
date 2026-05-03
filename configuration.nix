@@ -37,6 +37,11 @@
 
   networking.firewall.enable = true;
 
+  services.logind.settings.Login = {
+    HandleLidSwitch = "hibernate";
+    HandleLidSwitchDocked = "hibernate";
+  };
+
   services.gnome.gnome-keyring.enable = true;
   services.openssh.enable = true;
   services.fwupd.enable = true;
