@@ -11,7 +11,7 @@
       window-width = 120;
       window-height = 35;
       font-family = "JetBrainsMono Nerd Font";
-      font-size = 9;
+      font-size = 10;
       theme = "Ultra Dark";
       mouse-scroll-multiplier = 0.5;
       background-opacity = 0.9;
