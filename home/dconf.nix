@@ -21,7 +21,7 @@ in
         button-layout = "appmenu:minimize,maximize,close";
       };
       "org/gnome/mutter" = {
-        experimental-features = [ "variable-refresh-rate" ];
+        experimental-features = [ "variable-refresh-rate" "scale-monitor-framebuffer" ];
       };
       "org/gnome/shell/extensions/dash-to-dock" = {
         background-opacity = 0.0;
