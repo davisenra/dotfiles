@@ -29,6 +29,12 @@
       config.theme = "GitHub";
     };
 
+    programs.direnv = {
+      enable = true;
+      enableZshIntegration = true;
+      nix-direnv.enable = true;
+    };
+
     home.stateVersion = "25.11";
 
     home.sessionVariables = {
