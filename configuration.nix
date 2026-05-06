@@ -52,7 +52,7 @@
   i18n.defaultLocale = "en_US.UTF-8";
 
   i18n.extraLocaleSettings = {
-    LC_TIME = "pt_BR.UTF-8";
+    LC_TIME = "en_US.UTF-8";
     LC_NUMERIC = "pt_BR.UTF-8";
     LC_MONETARY = "pt_BR.UTF-8";
   };

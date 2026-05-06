@@ -9,8 +9,14 @@ in
     settings = {
       "org/gnome/desktop/input-sources" = {
         sources = [
-          (mkTuple [ "xkb" "us" ])
-          (mkTuple [ "xkb" "br" ])
+          (mkTuple [
+            "xkb"
+            "us+intl"
+          ])
+          (mkTuple [
+            "xkb"
+            "br"
+          ])
         ];
       };
       "org/gnome/desktop/interface" = {
@@ -21,7 +27,10 @@ in
         button-layout = "appmenu:minimize,maximize,close";
       };
       "org/gnome/mutter" = {
-        experimental-features = [ "variable-refresh-rate" "scale-monitor-framebuffer" ];
+        experimental-features = [
+          "variable-refresh-rate"
+          "scale-monitor-framebuffer"
+        ];
       };
       "org/gnome/shell/extensions/dash-to-dock" = {
         background-opacity = 0.0;
