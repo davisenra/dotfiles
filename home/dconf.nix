@@ -10,7 +10,7 @@ in
       "org/gnome/desktop/input-sources" = {
         sources = [
           (mkTuple [ "xkb" "us" ])
-          (mkTuple [ "xkb" "br+abnt2" ])
+          (mkTuple [ "xkb" "br" ])
         ];
       };
       "org/gnome/desktop/interface" = {
