@@ -26,4 +26,15 @@
     wrangler
     github-cli
   ];
+
+  programs.nix-ld = {
+    enable = true;
+    libraries = with pkgs; [
+      stdenv.cc.cc.lib
+      zlib
+      openssl
+      glib
+      libGL
+    ];
+  };
 }
