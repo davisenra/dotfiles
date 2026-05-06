@@ -1,4 +1,4 @@
-{ ... }:
+{ config, ... }:
 
 {
   imports = [
@@ -20,10 +20,15 @@
   nix.gc = {
     automatic = true;
     dates = "weekly";
-    options = "--delete-older-than 7d";
   };
 
   nix.optimise.automatic = true;
+
+  systemd.services.nix-gc.preStart = ''
+    ${config.nix.package}/bin/nix-env \
+      --profile /nix/var/nix/profiles/system \
+      --delete-generations +6
+  '';
 
   system.autoUpgrade = {
     enable = true;
