@@ -11,8 +11,6 @@
     nixd
     git
     btop
-    tmux
-    fastfetch
     ripgrep
     fd
     tokei

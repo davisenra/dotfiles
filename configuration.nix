@@ -28,14 +28,8 @@
   system.autoUpgrade = {
     enable = true;
     flake = "/home/davi/dotfiles";
-    flags = [
-      "--update-input"
-      "nixpkgs"
-    ];
     dates = "04:00";
   };
-
-  networking.firewall.enable = true;
 
   services.logind.settings.Login = {
     HandleLidSwitch = "hibernate";
@@ -51,6 +45,12 @@
   time.timeZone = "America/Sao_Paulo";
 
   i18n.defaultLocale = "en_US.UTF-8";
+
+  i18n.extraLocaleSettings = {
+    LC_TIME = "pt_BR.UTF-8";
+    LC_NUMERIC = "pt_BR.UTF-8";
+    LC_MONETARY = "pt_BR.UTF-8";
+  };
 
   system.stateVersion = "25.11";
 }
