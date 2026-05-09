@@ -1,53 +1,30 @@
 { ... }:
 
 {
-  home-manager.users.davi = {
-    imports = [
-      ./dconf.nix
-      ./fastfetch.nix
-      ./git.nix
-      ./zsh.nix
-      ./starship.nix
-      ./ghostty.nix
-      ./tmux.nix
-      ./packages.nix
-    ];
+  home.username = "davi";
+  home.homeDirectory = "/home/davi";
 
-    programs.eza = {
-      enable = true;
-      enableZshIntegration = true;
-      icons = "auto";
-    };
+  xdg.enable = true;
 
-    programs.zoxide = {
-      enable = true;
-      enableZshIntegration = true;
-    };
+  imports = [
+    ./fastfetch.nix
+    ./ghostty.nix
+    ./git.nix
+    ./starship.nix
+    ./tmux.nix
+    ./zsh.nix
+  ];
 
-    programs.bat = {
-      enable = true;
-      config.theme = "GitHub";
-    };
+  home.stateVersion = "25.11";
 
-    programs.direnv = {
-      enable = true;
-      enableZshIntegration = true;
-      nix-direnv.enable = true;
-    };
-
-    xdg.enable = true;
-
-    home.stateVersion = "25.11";
-
-    home.sessionVariables = {
-      EDITOR = "micro";
-      PNPM_HOME = "$HOME/.local/share/pnpm";
-    };
-
-    home.sessionPath = [
-      "$HOME/.local/bin"
-      "$HOME/.local/share/pnpm"
-      "$HOME/.opencode/bin"
-    ];
+  home.sessionVariables = {
+    EDITOR = "micro";
+    PNPM_HOME = "$HOME/.local/share/pnpm";
   };
+
+  home.sessionPath = [
+    "$HOME/.local/bin"
+    "$HOME/.local/share/pnpm"
+    "$HOME/.opencode/bin"
+  ];
 }
