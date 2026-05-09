@@ -7,7 +7,7 @@
     lazydocker
     k9s
     opencode
-    starship
+    fastfetch
     zsh-fzf-tab
     fzf
 

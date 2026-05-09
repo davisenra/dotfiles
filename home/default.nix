@@ -35,6 +35,8 @@
       nix-direnv.enable = true;
     };
 
+    xdg.enable = true;
+
     home.stateVersion = "25.11";
 
     home.sessionVariables = {

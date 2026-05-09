@@ -34,6 +34,8 @@
     initContent = ''
       source ${pkgs.zsh-fzf-tab}/share/fzf-tab/fzf-tab.plugin.zsh
 
+      stty -ixon
+
       setopt appendhistory
       setopt hist_ignore_all_dups
       setopt hist_save_no_dups

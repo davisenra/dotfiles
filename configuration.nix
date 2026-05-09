@@ -45,8 +45,6 @@
   services.openssh.enable = true;
   services.fwupd.enable = true;
 
-  security.pam.services.login.enableGnomeKeyring = true;
-
   time.timeZone = "America/Sao_Paulo";
 
   i18n.defaultLocale = "en_US.UTF-8";
