@@ -22,7 +22,6 @@
     nodejs_25
     pnpm
     go
-    vlang
     php85
     wrangler
     github-cli
