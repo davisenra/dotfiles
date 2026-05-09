@@ -11,7 +11,7 @@ in
         sources = [
           (mkTuple [
             "xkb"
-            "us+intl"
+            "us+altgr-intl"
           ])
           (mkTuple [
             "xkb"
